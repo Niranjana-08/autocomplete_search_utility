@@ -1,6 +1,6 @@
 # DSA-Project
 
-*Autocomplete feature and spelling checker with dynamic word addition support.*
+*Autocomplete feature with dynamic word addition support.*
 
 ## Smart Search - README
 
@@ -118,6 +118,20 @@ Smart Search is a lightweight, responsive autocomplete system that delivers inte
 - HTML/CSS: Responsive web interface and layout styling
 - JavaScript: Handles user input, dynamic rendering, and fetch API communication
 - HTTP: Custom protocol over TCP for request/response between client and server
+
+## Project Workflow
+
+```mermaid
+flowchart TD
+    A[Start] --> B{Is it working?}
+    B -->|Yes| C[Continue]
+    B -->|No| D[Fix the issue]
+    D --> B
+    C --> E[Done]
+
+```
+
+
 
 
 ## Notes
