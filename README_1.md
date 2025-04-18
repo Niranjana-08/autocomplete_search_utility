@@ -123,12 +123,20 @@ Smart Search is a lightweight, responsive autocomplete system that delivers inte
 
 ```mermaid
 flowchart TD
-    A[Start] --> B{Is it working?}
-    B -->|Yes| C[Continue]
-    B -->|No| D[Fix the issue]
-    D --> B
-    C --> E[Done]
-
+    A([Server Starts]) --> B[Load Dictionary File]
+    B --> C[Build Trie Structure]
+    C --> D[Listen for Client Requests]
+    D --> E{Request Type?}
+    E -- "GET /suggestions" --> F[Extract Query\nRun Autocomplete on Trie]
+    F --> G[Return Suggestions as JSON]
+    E -- "POST /add-word" --> H[Extract Word]
+    H --> I[Append to Dictionary File]
+    I --> J[Insert Word into Trie]
+    J --> K[Return Status as JSON]
+    E -- "GET /static file" --> L[Serve Static File or 404]
+    %% Frontend
+    M([User Types in Search Box]) --> F
+    N([User Adds New Word]) --> H
 ```
 
 
