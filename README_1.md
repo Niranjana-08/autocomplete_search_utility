@@ -1,6 +1,6 @@
 # DSA-Project
 
-*Autocomplete feature and spelling checker*
+*Autocomplete feature and spelling checker with dynamic word addition support.*
 
 ## Smart Search - README
 
